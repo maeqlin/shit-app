@@ -1,1 +1,137 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import "~@angular/material/theming";
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$shit-app-primary: mat-palette($mat-indigo);
+$shit-app-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$shit-app-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$shit-app-theme: mat-light-theme(
+  $shit-app-primary,
+  $shit-app-accent,
+  $shit-app-warn
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($shit-app-theme);
+
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Poppins, sans-serif;
+}
+
+.main-content-drawer {
+  height: 100%;
+  background-color: #fff;
+  overflow: hidden;
+
+  mat-drawer {
+    border-right: 1px solid #e4e4e4;
+    height: 100vh;
+    width: 256px;
+
+    .logo-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 140px;
+
+      .logo {
+        width: 176px;
+      }
+    }
+
+    .caption {
+      padding-left: 20px;
+      font-size: 12px;
+      font-weight: 500;
+      color: #808191;
+      margin-bottom: 16px;
+    }
+
+    .sidebar-menu {
+      font-family: "Inter", sans-serif;
+      max-height: 100%;
+      padding: 0 20px 30px;
+      overflow-y: auto;
+
+      a {
+        text-decoration: none;
+        color: #808191;
+        height: 56px;
+        padding: 0 20px;
+        display: flex;
+        border-radius: 12px;
+        align-items: center;
+        transition: all 0.25s;
+        font-weight: 600;
+        font-size: 14px;
+        &:active {
+          background: #6c5dd3;
+          color: #ffffff;
+        }
+
+        div {
+          margin-right: 16px;
+        }
+      }
+    }
+
+    .sidenav-bottom {
+      background: #fff;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      height: 72px;
+      padding: 0 40px;
+      box-shadow: inset 0px 1px 0px rgb(0 0 0 / 5%);
+      .mat-slide-toggle.mat-checked {
+        .mat-slide-toggle-thumb {
+          background: #3f8cff;
+        }
+
+        .mat-slide-toggle-bar {
+          background: rgba(228, 228, 228, 0.5);
+        }
+      }
+
+      .mat-slide-toggle-bar {
+        background: rgba(228, 228, 228, 0.5);
+      }
+    }
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .content {
+      padding-top: 40px;
+      flex: 0 0 calc(100% - 426px);
+      max-width: calc(100% - 426px);
+    }
+  }
+}

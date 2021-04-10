@@ -3,14 +3,28 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatInputModule} from '@angular/material/input';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+
+
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NoopAnimationsModule,
+    MatSidenavModule,
+    MatInputModule,
+    MatSlideToggleModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

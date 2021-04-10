@@ -7,4 +7,32 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'shit-app';
+
+  homePage = "localhost:4200";
+
+
+  constructor(
+
+
+
+  ){}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
