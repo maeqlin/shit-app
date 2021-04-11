@@ -12,7 +12,7 @@
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 $shit-app-primary: mat-palette($mat-indigo);
-$shit-app-accent: mat-palette($mat-pink, A200, A100, A400);
+$shit-app-accent: mat-palette($mat-indigo, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
 $shit-app-warn: mat-palette($mat-red);
@@ -98,14 +98,14 @@ body {
         transition: all 0.25s;
         font-weight: 600;
         font-size: 14px;
-        &:active {
-          background: #6c5dd3;
-          color: #ffffff;
-        }
-
+        background:#fff;
         div {
           margin-right: 16px;
         }
+      }
+      .menu-active-link {
+        background: #6c5dd3;
+        color: #ffffff;
       }
     }
 
