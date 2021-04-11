@@ -25,6 +25,8 @@ export class AppComponent {
   ngOnInit(): void {
     this.router.navigate(["/shit-home"]);
     this.themeSwitch.setDefaultTheme();
+
+    console.log(this.themeSwitch.setDefaultTheme());
     
   }
 

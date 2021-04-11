@@ -36,10 +36,6 @@ export class ThemeSwitcherComponent implements OnInit {
     this.themeColor == "light-theme"
       ? (this.themeColor = "dark-theme")
       : (this.themeColor = "light-theme");
-
-
-      console.log(this.themeColor);
-
     body.classList.add(this.themeColor);
 
     //save it to local storage
