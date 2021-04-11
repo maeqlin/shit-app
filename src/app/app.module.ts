@@ -12,7 +12,7 @@ import { ShitHomeComponent } from "./pages/shit-home/shit-home.component";
 import { ShitLiquidityComponent } from "./pages/shit-liquidity/shit-liquidity.component";
 
 const appRoutes: Routes = [
-  { path: "**", component: ShitHomeComponent, data: { title: "Shit Show" } },
+  { path: "", component: ShitHomeComponent, data: { title: "Shit Show" } },
 
   {
     path: "shit-liquidty",
@@ -22,7 +22,7 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, ShitLiquidityComponent, ShitHomeComponent],
+  declarations: [AppComponent, ShitLiquidityComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
