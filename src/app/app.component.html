@@ -5,31 +5,40 @@
     </div>
     <div class="sidebar-menu">
       <div class="caption">
-        <span>Admin tools</span>
+        <span>Shit tools</span>
       </div>
       <a routerLink='/shit-home' routerLinkActive="menu-active-link">
-        <div>icon</div>
+        <div><svg-icon  src="/assets/images/message.svg" [svgStyle]="{ 'width.px':24 }"></svg-icon></div>
         <div>Shit Farm</div>
       </a>
-      <a routerLink='/shit-liquidty' routerLinkActive="menu-active-link">
-        <div>icon</div>
+      <a id="liquidity" routerLink='/shit-liquidty' routerLinkActive="menu-active-link">
+        <div><svg-icon src="/assets/images/bag.svg" [svgStyle]="{ 'width.px':24}"></svg-icon></div>
         <div>Shit Liquidity</div>
       </a>
-      <a routerLink='/shit-farm' routerLinkActive="menu-active-link">
-        <div>icon</div>
-        <div>Trade</div>
+      <a routerLink='/shit-tokens' routerLinkActive="menu-active-link">
+        <div><svg-icon src="/assets/images/analytic.svg" [svgStyle]="{ 'width.px':24 }"></svg-icon></div>
+        <div>Tokens</div>
       </a>
-      <a routerLink='/shit-farm' routerLinkActive="menu-active-link">
-        <div>icon</div>
-        <div>Pools</div>
+      <a routerLink='/shit-pairs' routerLinkActive="menu-active-link">
+        <div><svg-icon src="/assets/images/compass.svg" [svgStyle]="{ 'width.px':24 }"></svg-icon></div>
+        <div>Pairs</div>
       </a>
-      <a routerLink='/shit-farm' routerLinkActive="menu-active-link">
-        <div>icon</div>
-        <div>Info</div>
+      <a routerLink='/shit-rank' routerLinkActive="menu-active-link">
+        <div><svg-icon src="/assets/images/wallet.svg" [svgStyle]="{ 'width.px':24}"></svg-icon></div>
+        <div>Ranks</div>
+      </a>
+      <a routerLink='/shit-statements' routerLinkActive="menu-active-link">
+        <div><svg-icon src="/assets/images/text.svg" [svgStyle]="{ 'width.px':24}"></svg-icon></div>
+        <div>Statements</div>
+      </a>
+      <a routerLink='/shit-settings' routerLinkActive="menu-active-link">
+        <div><svg-icon src="/assets/images/settings.svg" [svgStyle]="{ 'width.px':24}"></svg-icon></div>
+        <div>Settings</div>
       </a>
     </div>
     <div class="sidenav-bottom">
-      <mat-slide-toggle>Slide this shit!</mat-slide-toggle>
+      <svg-icon src="/assets/images/daysun.svg" [svgStyle]="{ 'width.px':30, 'padding-top':6 }"></svg-icon>
+      <mat-slide-toggle></mat-slide-toggle>
     </div>
   </mat-drawer>
   <mat-drawer-content>

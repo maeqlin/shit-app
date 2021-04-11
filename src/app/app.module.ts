@@ -1,5 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -10,18 +11,57 @@ import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { RouterModule, Routes } from "@angular/router";
 import { ShitHomeComponent } from "./pages/shit-home/shit-home.component";
 import { ShitLiquidityComponent } from "./pages/shit-liquidity/shit-liquidity.component";
+import { AngularSvgIconModule } from "angular-svg-icon";
+import { ShitPairsComponent } from "./pages/shit-pairs/shit-pairs.component";
+import { ShitTokensComponent } from "./pages/shit-tokens/shit-tokens.component";
+import { ShitRankComponent } from "./pages/shit-rank/shit-rank.component";
+import { ShitStatementsComponent } from './pages/shit-statements/shit-statements.component';
+import { ShitSettingsComponent } from './pages/shit-settings/shit-settings.component';
 
 const appRoutes: Routes = [
-  { path: 'shit-home', component: ShitHomeComponent },
+  { path: "shit-home", component: ShitHomeComponent },
   {
     path: "shit-liquidty",
     component: ShitLiquidityComponent,
     data: { title: "Shit Liquidty" },
   },
+  {
+    path: "shit-pairs",
+    component: ShitPairsComponent,
+    data: { title: "Shit Piars" },
+  },
+  {
+    path: "shit-tokens",
+    component: ShitTokensComponent,
+    data: { title: "Shit Tokens" },
+  },
+  {
+    path: "shit-rank",
+    component: ShitRankComponent,
+    data: { title: "Shit Rank" },
+  },
+  {
+    path: "shit-statements",
+    component: ShitStatementsComponent,
+    data: { title: "Shit Statements" },
+  },
+  {
+    path: "shit-settings",
+    component: ShitSettingsComponent,
+    data: { title: "Shit Settings" },
+  },
 ];
 
 @NgModule({
-  declarations: [AppComponent, ShitLiquidityComponent],
+  declarations: [
+    AppComponent,
+    ShitLiquidityComponent,
+    ShitPairsComponent,
+    ShitTokensComponent,
+    ShitRankComponent,
+    ShitStatementsComponent,
+    ShitSettingsComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -29,7 +69,9 @@ const appRoutes: Routes = [
     MatSidenavModule,
     MatInputModule,
     MatSlideToggleModule,
-    RouterModule.forRoot(appRoutes, { relativeLinkResolution: 'legacy' }),
+    HttpClientModule,
+    AngularSvgIconModule.forRoot(),
+    RouterModule.forRoot(appRoutes, { relativeLinkResolution: "legacy" }),
   ],
   providers: [],
   bootstrap: [AppComponent],

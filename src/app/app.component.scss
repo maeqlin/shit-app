@@ -1,0 +1,135 @@
+.main-content-drawer {
+  height: 100%;
+  background-color: #fff;
+  overflow: hidden;
+
+  mat-drawer {
+    border-right: 1px solid #e4e4e4;
+    height: 100vh;
+    width: 256px;
+    padding: 140px 0 72px;
+
+    .mat-drawer-inner-container {
+      overflow: hidden;
+    }
+
+    .logo-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 140px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+
+      .logo {
+        width: 176px;
+      }
+    }
+
+    .caption {
+      padding-left: 20px;
+      font-size: 12px;
+      font-weight: 500;
+      color: #808191;
+      margin-bottom: 16px;
+    }
+
+    .sidebar-menu {
+      font-family: "Inter", sans-serif;
+      max-height: 100%;
+      padding: 0 20px 30px;
+      overflow-y: hidden;
+
+  
+
+      a {
+        text-decoration: none;
+        color: #808191;
+        height: 56px;
+        padding: 0 20px;
+        display: flex;
+        border-radius: 12px;
+        align-items: center;
+        transition: all 0.25s;
+        font-weight: 600;
+        font-size: 14px;
+        background: #fff;
+
+        &:hover {
+          :not(.menu-active-link div) {
+            color: #6c5dd3;
+
+            :not(.menu-active-link) svg {
+              fill: #6c5dd3;
+            }
+          }
+        }
+
+        svg {
+          fill: #a4a5a6;
+        }
+
+        div:nth-child(1) {
+          height: 20px;
+        }
+
+        div {
+          margin-right: 16px;
+        }
+      }
+
+      .menu-active-link {
+        background: #6c5dd3;
+        color: #ffffff;
+
+        svg {
+          fill: #fff;
+        }
+      }
+    }
+
+    .sidenav-bottom {
+      background: #fff;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      height: 72px;
+      padding: 0 40px;
+      box-shadow: inset 0px 1px 0px rgb(0 0 0 / 5%);
+
+      .mat-slide-toggle {
+        padding-left: 56px;
+
+        .mat-slide-toggle.mat-checked {
+          .mat-slide-toggle-thumb {
+            background: #3f8cff;
+          }
+
+          .mat-slide-toggle-bar {
+            background: rgba(228, 228, 228, 0.5);
+          }
+        }
+
+        .mat-slide-toggle-bar {
+          background: rgba(228, 228, 228, 0.5);
+        }
+      }
+    }
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .content {
+      padding-top: 40px;
+      flex: 0 0 calc(100% - 426px);
+      max-width: calc(100% - 426px);
+    }
+  }
+}

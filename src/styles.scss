@@ -1,6 +1,7 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@import "~@angular/material/theming";
+@import "~@angular/material/core/theming/_all-theme";
+
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -24,6 +25,15 @@ $shit-app-theme: mat-light-theme(
   $shit-app-warn
 );
 
+.dark-theme {
+  // Dark theme
+  $app-dark-primary: mat-palette($mat-pink, 700);
+  $app-dark-accent: mat-palette($mat-blue-grey);
+  $app-dark-theme: mat-dark-theme($app-dark-primary, $app-dark-accent);
+
+  @include angular-material-theme($app-dark-theme);
+}
+
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
@@ -38,112 +48,4 @@ body {
 body {
   margin: 0;
   font-family: Poppins, sans-serif;
-}
-
-.main-content-drawer {
-  height: 100%;
-  background-color: #fff;
-  overflow: hidden;
-
-  mat-drawer {
-    border-right: 1px solid #e4e4e4;
-    height: 100vh;
-    width: 256px;
-    padding: 140px 0 72px;
-
-
-    .mat-drawer-inner-container{
-
-      overflow: hidden;
-    }
-
-
-    .logo-wrapper {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 140px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-
-      .logo {
-        width: 176px;
-      }
-    }
-
-    .caption {
-      padding-left: 20px;
-      font-size: 12px;
-      font-weight: 500;
-      color: #808191;
-      margin-bottom: 16px;
-    }
-
-    .sidebar-menu {
-      font-family: "Inter", sans-serif;
-      max-height: 100%;
-      padding: 0 20px 30px;
-      overflow-y: auto;
-
-      a {
-        text-decoration: none;
-        color: #808191;
-        height: 56px;
-        padding: 0 20px;
-        display: flex;
-        border-radius: 12px;
-        align-items: center;
-        transition: all 0.25s;
-        font-weight: 600;
-        font-size: 14px;
-        background:#fff;
-        div {
-          margin-right: 16px;
-        }
-      }
-      .menu-active-link {
-        background: #6c5dd3;
-        color: #ffffff;
-      }
-    }
-
-    .sidenav-bottom {
-      background: #fff;
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      display: flex;
-      align-items: center;
-      height: 72px;
-      padding: 0 40px;
-      box-shadow: inset 0px 1px 0px rgb(0 0 0 / 5%);
-      .mat-slide-toggle.mat-checked {
-        .mat-slide-toggle-thumb {
-          background: #3f8cff;
-        }
-
-        .mat-slide-toggle-bar {
-          background: rgba(228, 228, 228, 0.5);
-        }
-      }
-
-      .mat-slide-toggle-bar {
-        background: rgba(228, 228, 228, 0.5);
-      }
-    }
-  }
-
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-
-    .content {
-      padding-top: 40px;
-      flex: 0 0 calc(100% - 426px);
-      max-width: calc(100% - 426px);
-    }
-  }
 }
