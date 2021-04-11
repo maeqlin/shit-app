@@ -1,6 +1,6 @@
 .main-content-drawer {
   height: 100%;
-  background-color: #fff;
+ 
   overflow: hidden;
 
   mat-drawer {
@@ -102,7 +102,7 @@
       padding: 0 40px;
       box-shadow: inset 0px 1px 0px rgb(0 0 0 / 5%);
 
-      .mat-slide-toggle {
+      app-theme-switcher {
         padding-left: 56px;
 
         .mat-slide-toggle.mat-checked {

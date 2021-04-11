@@ -1,5 +1,8 @@
-import { Component, HostBinding } from "@angular/core";
+import { Component, HostBinding, OnDestroy, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
+import { Subscription } from "rxjs";
+import { OverlayContainer } from "@angular/cdk/overlay";
+import { ThemeSwitcherComponent } from "./theme-switcher/theme-switcher.component";
 
 @Component({
   selector: "app-root",
@@ -7,11 +10,25 @@ import { Router } from "@angular/router";
   styleUrls: ["./app.component.scss"],
 })
 export class AppComponent {
+  themes: string[];
+  themingSubscription: Subscription;
   title = "shit-app";
   homePage = "localhost:4200";
-  constructor(private readonly router: Router) {}
+  constructor(
+    private readonly router: Router,
+    public themeSwitch: ThemeSwitcherComponent
+  ) {}
+
+
+  @HostBinding('class') public cssClass: string;
 
   ngOnInit(): void {
     this.router.navigate(["/shit-home"]);
+    this.themeSwitch.setDefaultTheme();
+    
+  }
+
+
+  ngOnDestroy() {
   }
 }

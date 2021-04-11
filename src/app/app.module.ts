@@ -15,8 +15,9 @@ import { AngularSvgIconModule } from "angular-svg-icon";
 import { ShitPairsComponent } from "./pages/shit-pairs/shit-pairs.component";
 import { ShitTokensComponent } from "./pages/shit-tokens/shit-tokens.component";
 import { ShitRankComponent } from "./pages/shit-rank/shit-rank.component";
-import { ShitStatementsComponent } from './pages/shit-statements/shit-statements.component';
-import { ShitSettingsComponent } from './pages/shit-settings/shit-settings.component';
+import { ShitStatementsComponent } from "./pages/shit-statements/shit-statements.component";
+import { ShitSettingsComponent } from "./pages/shit-settings/shit-settings.component";
+import { ThemeSwitcherComponent } from './theme-switcher/theme-switcher.component';
 
 const appRoutes: Routes = [
   { path: "shit-home", component: ShitHomeComponent },
@@ -61,6 +62,7 @@ const appRoutes: Routes = [
     ShitRankComponent,
     ShitStatementsComponent,
     ShitSettingsComponent,
+    ThemeSwitcherComponent,
   ],
   imports: [
     BrowserModule,
@@ -73,7 +75,7 @@ const appRoutes: Routes = [
     AngularSvgIconModule.forRoot(),
     RouterModule.forRoot(appRoutes, { relativeLinkResolution: "legacy" }),
   ],
-  providers: [],
+  providers: [ThemeSwitcherComponent],
   bootstrap: [AppComponent],
   exports: [RouterModule],
 })

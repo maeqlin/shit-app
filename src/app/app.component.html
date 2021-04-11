@@ -1,4 +1,4 @@
-<mat-drawer-container class="main-content-drawer">
+<mat-drawer-container class="main-content-drawer mat-app-background">
   <mat-drawer mode="side" opened>
     <div class="logo-wrapper">
       <a><img class="logo" src="https://ui8-unity.herokuapp.com/img/logo.png" alt="sfas" /></a>
@@ -8,37 +8,53 @@
         <span>Shit tools</span>
       </div>
       <a routerLink='/shit-home' routerLinkActive="menu-active-link">
-        <div><svg-icon  src="/assets/images/message.svg" [svgStyle]="{ 'width.px':24 }"></svg-icon></div>
+        <div>
+          <svg-icon src="/assets/images/message.svg" [svgStyle]="{ 'width.px':24 }"></svg-icon>
+        </div>
         <div>Shit Farm</div>
       </a>
       <a id="liquidity" routerLink='/shit-liquidty' routerLinkActive="menu-active-link">
-        <div><svg-icon src="/assets/images/bag.svg" [svgStyle]="{ 'width.px':24}"></svg-icon></div>
+        <div>
+          <svg-icon src="/assets/images/bag.svg" [svgStyle]="{ 'width.px':24}"></svg-icon>
+        </div>
         <div>Shit Liquidity</div>
       </a>
       <a routerLink='/shit-tokens' routerLinkActive="menu-active-link">
-        <div><svg-icon src="/assets/images/analytic.svg" [svgStyle]="{ 'width.px':24 }"></svg-icon></div>
+        <div>
+          <svg-icon src="/assets/images/analytic.svg" [svgStyle]="{ 'width.px':24 }"></svg-icon>
+        </div>
         <div>Tokens</div>
       </a>
       <a routerLink='/shit-pairs' routerLinkActive="menu-active-link">
-        <div><svg-icon src="/assets/images/compass.svg" [svgStyle]="{ 'width.px':24 }"></svg-icon></div>
+        <div>
+          <svg-icon src="/assets/images/compass.svg" [svgStyle]="{ 'width.px':24 }"></svg-icon>
+        </div>
         <div>Pairs</div>
       </a>
       <a routerLink='/shit-rank' routerLinkActive="menu-active-link">
-        <div><svg-icon src="/assets/images/wallet.svg" [svgStyle]="{ 'width.px':24}"></svg-icon></div>
+        <div>
+          <svg-icon src="/assets/images/wallet.svg" [svgStyle]="{ 'width.px':24}"></svg-icon>
+        </div>
         <div>Ranks</div>
       </a>
       <a routerLink='/shit-statements' routerLinkActive="menu-active-link">
-        <div><svg-icon src="/assets/images/text.svg" [svgStyle]="{ 'width.px':24}"></svg-icon></div>
+        <div>
+          <svg-icon src="/assets/images/text.svg" [svgStyle]="{ 'width.px':24}"></svg-icon>
+        </div>
         <div>Statements</div>
       </a>
       <a routerLink='/shit-settings' routerLinkActive="menu-active-link">
-        <div><svg-icon src="/assets/images/settings.svg" [svgStyle]="{ 'width.px':24}"></svg-icon></div>
+        <div>
+          <svg-icon src="/assets/images/settings.svg" [svgStyle]="{ 'width.px':24}"></svg-icon>
+        </div>
         <div>Settings</div>
       </a>
     </div>
+
     <div class="sidenav-bottom">
+
       <svg-icon src="/assets/images/daysun.svg" [svgStyle]="{ 'width.px':30, 'padding-top':6 }"></svg-icon>
-      <mat-slide-toggle></mat-slide-toggle>
+      <app-theme-switcher></app-theme-switcher>
     </div>
   </mat-drawer>
   <mat-drawer-content>
