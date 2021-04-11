@@ -12,8 +12,7 @@ import { ShitHomeComponent } from "./pages/shit-home/shit-home.component";
 import { ShitLiquidityComponent } from "./pages/shit-liquidity/shit-liquidity.component";
 
 const appRoutes: Routes = [
-  { path: "", component: ShitHomeComponent, data: { title: "Shit Show" } },
-
+  { path: 'shit-home', component: ShitHomeComponent },
   {
     path: "shit-liquidty",
     component: ShitLiquidityComponent,

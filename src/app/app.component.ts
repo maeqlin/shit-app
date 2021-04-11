@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +9,19 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'shit-app';
   homePage = 'localhost:4200';
-  constructor() {}
+  constructor(
+    private readonly router: Router,
+  
+  ) {}
+
+
+
+  ngOnInit(): void {
+
+    this.router.navigate(['/shit-home']);
+
+  }
+
+  
+
 }
