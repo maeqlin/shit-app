@@ -24,7 +24,6 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     MatSidenavModule,
     MatInputModule,
     MatSlideToggleModule
-    
   ],
   providers: [],
   bootstrap: [AppComponent]

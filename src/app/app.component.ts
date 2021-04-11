@@ -3,36 +3,10 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'shit-app';
-
-  homePage = "localhost:4200";
-
-
-  constructor(
-
-
-
-  ){}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  homePage = 'localhost:4200';
+  constructor() {}
 }
