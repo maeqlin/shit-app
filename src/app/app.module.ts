@@ -30,7 +30,7 @@ const appRoutes: Routes = [
     MatSidenavModule,
     MatInputModule,
     MatSlideToggleModule,
-    RouterModule.forRoot(appRoutes, {}),
+    RouterModule.forRoot(appRoutes, { relativeLinkResolution: 'legacy' }),
   ],
   providers: [],
   bootstrap: [AppComponent],
