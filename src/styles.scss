@@ -49,12 +49,24 @@ body {
     border-right: 1px solid #e4e4e4;
     height: 100vh;
     width: 256px;
+    padding: 140px 0 72px;
+
+
+    .mat-drawer-inner-container{
+
+      overflow: hidden;
+    }
+
 
     .logo-wrapper {
       display: flex;
       justify-content: center;
       align-items: center;
       height: 140px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
 
       .logo {
         width: 176px;
