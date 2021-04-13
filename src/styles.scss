@@ -3,17 +3,93 @@
 @include mat-core();
 
 
+
+
+
+$shit-primary-light: (
+  50: #ffff,
+  100: #ffff,
+  200: #ffff,
+  300: #ffff,
+  400: #ffff,
+  500: #ffff,
+  600: #ffff,
+  700: #ffff,
+  800: #ffff,
+  900: #ffff,
+  A100: #ffff,
+  A200: #ffff,
+  A400: #ffff,
+  A700: #ffff,
+  contrast: (
+    50: white,
+    100: white,
+    200: white,
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: white,
+    A200: white,
+    A400: white,
+    A700: white,
+  )
+);
+
+
+
+$shit-primary-dark: (
+  50: #242731,
+  100: #242731,
+  200: #242731,
+  300: #242731,
+  400: #242731,
+  500: #242731,
+  600: #242731,
+  700: #242731,
+  800: #242731,
+  900: #242731,
+  A100: #242731,
+  A200: #242731,
+  A400: #242731,
+  A700: #242731,
+  contrast: (
+    50:#242731,
+    100: #242731,
+    200: #242731,
+    300: #242731,
+    400: #242731,
+    500: #242731,
+    600: #242731,
+    700: #242731,
+    800: #242731,
+    900: #242731,
+    A100: #242731,
+    A200: #242731,
+    A400:#242731,
+    A700: #242731,
+  )
+);
+
+
+
+
+
+
 // Define the light theme
-$light-app-primary: mat-palette($mat-blue);
-$light-app-accent: mat-palette($mat-pink, A200, A100, A400);
+$light-app-primary: mat-palette($shit-primary-light);
+$light-app-accent: mat-palette($shit-primary-dark);
 $light-app-theme: mat-light-theme($light-app-primary, $light-app-accent);
 
 // Include the light theme styles.
 
 
 // Define an dark theme.
-$dark-primary: mat-palette($mat-brown);
-$dark-accent: mat-palette($mat-amber, A500, A300, A500);
+$dark-primary: mat-palette($shit-primary-dark);
+$dark-accent: mat-palette($shit-primary-dark);
 $dark-app-theme: mat-dark-theme($dark-primary, $dark-accent);
 
 // themes will be switched based on class names, angular will switch classes which will trigger the theme change
@@ -24,6 +100,11 @@ $dark-app-theme: mat-dark-theme($dark-primary, $dark-accent);
 .light-theme {
   @include angular-material-theme($light-app-theme);
 }
+
+
+
+
+
 
 html,
 body {

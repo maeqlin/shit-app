@@ -25,7 +25,6 @@ export class ThemeSwitcherComponent implements OnInit {
     // if theme is stored in storage - use it
     const body = document.getElementsByTagName("mat-drawer-container")[0];
 
-
     if (localStorage.getItem("pxTheme") == "dark-theme") {
       //set theme color to one from storage
       this.isDarkTheme = true;
