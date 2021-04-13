@@ -53,7 +53,7 @@
         transition: all 0.25s;
         font-weight: 600;
         font-size: 14px;
-        background: #fff;
+        background: transparent;
 
         &:hover {
           :not(.menu-active-link div) {
@@ -89,7 +89,7 @@
     }
 
     .sidenav-bottom {
-      background: #fff;
+      background: transparent;
       position: absolute;
       left: 0;
       right: 0;
