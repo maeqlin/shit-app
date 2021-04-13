@@ -7,7 +7,13 @@ import { Component, OnInit } from "@angular/core";
 })
 export class ThemeSwitcherComponent implements OnInit {
   // let's define default theme
-  themeColor = "light-theme";
+  themeColor: string;
+
+  /**
+   * button toggled
+   */
+
+  isDarkTheme = false;
 
   constructor() {}
 
@@ -17,14 +23,25 @@ export class ThemeSwitcherComponent implements OnInit {
 
   setDefaultTheme() {
     // if theme is stored in storage - use it
+    const body = document.getElementsByTagName("mat-drawer-container")[0];
 
-    if (localStorage.getItem("pxTheme")) {
+
+    if (localStorage.getItem("pxTheme") == "dark-theme") {
       //set theme color to one from storage
-      this.themeColor = localStorage.getItem("pxTheme");
-
-      //add that class to body
-      const body = document.getElementsByTagName("mat-drawer-container")[0];
+      this.isDarkTheme = true;
+      this.themeColor = "dark-theme";
       body.classList.add(this.themeColor);
+      localStorage.setItem("pxTheme", this.themeColor);
+      //add that class to body
+    } else if (localStorage.getItem("pxTheme") == "light-theme") {
+      this.themeColor = "light-theme";
+      body.classList.add(this.themeColor);
+      localStorage.setItem("pxTheme", this.themeColor);
+    } else {
+      this.themeColor = "light-theme";
+      body.classList.add(this.themeColor);
+      this.isDarkTheme = false;
+      localStorage.setItem("pxTheme", this.themeColor);
     }
   }
 

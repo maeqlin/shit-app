@@ -20,14 +20,10 @@ export class AppComponent {
   ) {}
 
 
-  @HostBinding('class') public cssClass: string;
 
   ngOnInit(): void {
     this.router.navigate(["/shit-home"]);
-    this.themeSwitch.setDefaultTheme();
-
-    console.log(this.themeSwitch.setDefaultTheme());
-    
+ 
   }
 
 

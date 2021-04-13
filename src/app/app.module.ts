@@ -18,6 +18,8 @@ import { ShitRankComponent } from "./pages/shit-rank/shit-rank.component";
 import { ShitStatementsComponent } from "./pages/shit-statements/shit-statements.component";
 import { ShitSettingsComponent } from "./pages/shit-settings/shit-settings.component";
 import { ThemeSwitcherComponent } from './theme-switcher/theme-switcher.component';
+import { FormsModule } from '@angular/forms';
+
 
 const appRoutes: Routes = [
   { path: "shit-home", component: ShitHomeComponent },
@@ -63,6 +65,7 @@ const appRoutes: Routes = [
     ShitStatementsComponent,
     ShitSettingsComponent,
     ThemeSwitcherComponent,
+  
   ],
   imports: [
     BrowserModule,
@@ -70,6 +73,7 @@ const appRoutes: Routes = [
     NoopAnimationsModule,
     MatSidenavModule,
     MatInputModule,
+    FormsModule,
     MatSlideToggleModule,
     HttpClientModule,
     AngularSvgIconModule.forRoot(),

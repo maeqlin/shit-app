@@ -1,4 +1,4 @@
 
-<svg-icon [class.hide]="themeColor == 'light-theme'"  src="/assets/images/night.svg" [svgStyle]="{ 'width.px':30, 'padding-top':6 }"></svg-icon>
-<svg-icon [class.hide]="themeColor == 'dark-theme'"  src="/assets/images/daysun.svg" [svgStyle]="{ 'width.px':30, 'padding-top':6 }"></svg-icon>
-<mat-slide-toggle (click)="themeSwitcher()"></mat-slide-toggle>
+<svg-icon [class.hide]="!isDarkTheme"  src="/assets/images/night.svg" [svgStyle]="{ 'width.px':30, 'padding-top':6 }"></svg-icon>
+<svg-icon [class.hide]="isDarkTheme"  src="/assets/images/daysun.svg" [svgStyle]="{ 'width.px':30, 'padding-top':6 }"></svg-icon>
+<mat-slide-toggle color="primary" [(ngModel)]="isDarkTheme" (ngModelChange)="themeSwitcher()"></mat-slide-toggle>
