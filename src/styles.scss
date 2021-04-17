@@ -2,10 +2,6 @@
 @import "~@angular/material/theming";
 @include mat-core();
 
-
-
-
-
 $shit-primary-light: (
   50: #ffff,
   100: #ffff,
@@ -22,9 +18,9 @@ $shit-primary-light: (
   A400: #ffff,
   A700: #ffff,
   contrast: (
-    50: white,
+    50: #ffff,
     100: white,
-    200: white,
+    200: #ffffff,
     300: white,
     400: white,
     500: white,
@@ -36,18 +32,16 @@ $shit-primary-light: (
     A200: white,
     A400: white,
     A700: white,
-  )
+  ),
 );
 
-
-
 $shit-primary-dark: (
-  50: #242731,
-  100: #242731,
-  200: #242731,
-  300: #242731,
-  400: #242731,
-  500: #242731,
+  50: #3f8cff,
+  100: #3f8cff,
+  200: #3f8cff,
+  300: #3f8cff,
+  400: #3f8cff,
+  500: #3f8cff,
   600: #242731,
   700: #242731,
   800: #242731,
@@ -57,27 +51,55 @@ $shit-primary-dark: (
   A400: #242731,
   A700: #242731,
   contrast: (
-    50:#242731,
+    50: #242731,
     100: #242731,
     200: #242731,
     300: #242731,
     400: #242731,
     500: #242731,
-    600: #242731,
-    700: #242731,
-    800: #242731,
-    900: #242731,
-    A100: #242731,
-    A200: #242731,
-    A400:#242731,
-    A700: #242731,
-  )
+    600: #3f8cff,
+    700: #3f8cff,
+    800: #3f8cff,
+    900: #3f8cff,
+    A100: #3f8cff,
+    A200: #3f8cff,
+    A400: #3f8cff,
+    A700: #3f8cff,
+  ),
 );
 
-
-
-
-
+$shit-primary-dark-accent: (
+  50: #3f8cff,
+  100: #3f8cff,
+  200: #3f8cff,
+  300: #3f8cff,
+  400: #3f8cff,
+  500: #3f8cff,
+  600: #242731,
+  700: #242731,
+  800: #242731,
+  900: #242731,
+  A100: #242731,
+  A200: #242731,
+  A400: #242731,
+  A700: #242731,
+  contrast: (
+    50: #242731,
+    100: #242731,
+    200: #242731,
+    300: #242731,
+    400: #242731,
+    500: #242731,
+    600: #3f8cff,
+    700: #3f8cff,
+    800: #3f8cff,
+    900: #3f8cff,
+    A100: #3f8cff,
+    A200: #3f8cff,
+    A400: #3f8cff,
+    A700: #3f8cff,
+  ),
+);
 
 // Define the light theme
 $light-app-primary: mat-palette($shit-primary-light);
@@ -86,25 +108,39 @@ $light-app-theme: mat-light-theme($light-app-primary, $light-app-accent);
 
 // Include the light theme styles.
 
-
 // Define an dark theme.
 $dark-primary: mat-palette($shit-primary-dark);
-$dark-accent: mat-palette($shit-primary-dark);
+$dark-accent: mat-palette($shit-primary-dark-accent);
 $dark-app-theme: mat-dark-theme($dark-primary, $dark-accent);
 
 // themes will be switched based on class names, angular will switch classes which will trigger the theme change
 .dark-theme {
   @include angular-material-theme($dark-app-theme);
+  background: #242731;
+  color: #fff;
+
+  mat-drawer {
+    background-color: #242731 !important;
+    border-right: 1px solid #e4e4e4;
+
+    .sidenav-bottom {
+      box-shadow: inset 0px 1px 0px rgb(228 228 228 / 10%);
+    }
+  }
 }
 
 .light-theme {
   @include angular-material-theme($light-app-theme);
+  background: #ffff;
+
+  .mat-drawer-inner-container {
+    background: #ffff;
+
+    .sidenav-bottom {
+      box-shadow: inset 0px 1px 0px rgb(0 0 0 / 5%);
+    }
+  }
 }
-
-
-
-
-
 
 html,
 body {
