@@ -10,6 +10,7 @@ export class ShitHomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }
