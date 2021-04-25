@@ -60,7 +60,6 @@ export class AppComponent {
   }
 
   ngOnInit(): void {
-    this.connectWallet();
     this.router.navigate(["/shit-home"]);
 
     this.observableSubscriptions.push(
