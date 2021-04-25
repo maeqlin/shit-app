@@ -78,10 +78,5 @@ export class AppComponent {
         })
     );
   }
-
-  connectWallet() {
-    this.contractService.enableEthereum();
-  }
-
   ngOnDestroy() {}
 }

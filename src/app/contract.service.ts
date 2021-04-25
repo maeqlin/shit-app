@@ -12,23 +12,16 @@ export class ContractService {
    */
   web3: Web3;
 
-
-  setAccount: any;
+  currentAddress : string;
 
   constructor() {
     this.web3 = new Web3(
-      new Web3.providers.HttpProvider(
-        "https://rinkeby.infura.io/v3/38548d4828ba402a93d2fd3b5cc3afca"
-      )
+      Web3.givenProvider ||
+        "wss://rinkeby.infura.io/ws/v3/38548d4828ba402a93d2fd3b5cc3afca"
     );
   }
 
   ngOnInit() {}
-
-  enableEthereum() {
-    this.web3.eth.getAccounts().then((e) => {
-      console.log(e);
-    });
 
     // this.web3.eth.requestAccounts().then((e) => {
     //   console.log(e);
@@ -39,5 +32,5 @@ export class ContractService {
     //     resolve();
     //   });
     // });
-  }
+  
 }

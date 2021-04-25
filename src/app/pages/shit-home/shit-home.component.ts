@@ -11,11 +11,21 @@ export class ShitHomeComponent implements OnInit {
 
   balance: any;
 
+  currentAddress: string;
+
   ngOnInit(): void {
-    this.contractService.web3.eth
-      .getBalance("0x3325FF60C570BF812A8cE73D0D35C9Ddc6EcBE98")
-      .then((e) => {
-        this.balance = e;
-      });
+    this.enableEthereum();
+  }
+
+  enableEthereum() {
+    this.contractService.web3.eth.requestAccounts().then((e) => {
+      this.currentAddress = e[0];
+
+      this.contractService.web3.eth
+        .getBalance(this.currentAddress)
+        .then((e) => {
+          this.balance = e;
+        });
+    });
   }
 }
