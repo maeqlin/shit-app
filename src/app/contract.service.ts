@@ -12,6 +12,9 @@ export class ContractService {
    */
   web3: Web3;
 
+
+  setAccount: any;
+
   constructor() {
     this.web3 = new Web3(
       new Web3.providers.HttpProvider(
@@ -23,7 +26,10 @@ export class ContractService {
   ngOnInit() {}
 
   enableEthereum() {
-    this.web3.eth.requestAccounts();
+    this.web3.eth.getAccounts().then((e) => {
+      console.log(e);
+    });
+
     // this.web3.eth.requestAccounts().then((e) => {
     //   console.log(e);
 
