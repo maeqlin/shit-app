@@ -1,7 +1,7 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { HttpClientModule } from "@angular/common/http";
-
+import { MatToolbarModule } from "@angular/material/toolbar";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { NoopAnimationsModule } from "@angular/platform-browser/animations";
@@ -17,9 +17,8 @@ import { ShitTokensComponent } from "./pages/shit-tokens/shit-tokens.component";
 import { ShitRankComponent } from "./pages/shit-rank/shit-rank.component";
 import { ShitStatementsComponent } from "./pages/shit-statements/shit-statements.component";
 import { ShitSettingsComponent } from "./pages/shit-settings/shit-settings.component";
-import { ThemeSwitcherComponent } from './theme-switcher/theme-switcher.component';
-import { FormsModule } from '@angular/forms';
-
+import { ThemeSwitcherComponent } from "./theme-switcher/theme-switcher.component";
+import { FormsModule } from "@angular/forms";
 
 const appRoutes: Routes = [
   { path: "shit-home", component: ShitHomeComponent },
@@ -65,13 +64,13 @@ const appRoutes: Routes = [
     ShitStatementsComponent,
     ShitSettingsComponent,
     ThemeSwitcherComponent,
-  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NoopAnimationsModule,
     MatSidenavModule,
+    MatToolbarModule,
     MatInputModule,
     FormsModule,
     MatSlideToggleModule,

@@ -119,6 +119,11 @@ $dark-app-theme: mat-dark-theme($dark-primary, $dark-accent);
   background: #242731;
   color: #fff;
 
+  mat-toolbar {
+    border-bottom: solid 1px rgba(255, 255, 255, 0.12);
+  }
+
+  
   mat-drawer {
     background-color: #242731 !important;
     border-right: 1px solid #e4e4e4;
@@ -132,6 +137,10 @@ $dark-app-theme: mat-dark-theme($dark-primary, $dark-accent);
 .light-theme {
   @include angular-material-theme($light-app-theme);
   background: #ffff;
+
+  mat-toolbar {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  }
 
   .mat-drawer-inner-container {
     background: #ffff;

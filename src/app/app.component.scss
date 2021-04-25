@@ -1,3 +1,20 @@
+mat-toolbar {
+  position: absolute;
+  top: 0;
+  left: 256px;
+  z-index: 2;
+  height: 96px;
+
+  button {
+    div {
+      background: #1b1d21;
+      border-radius: 1px;
+      margin: 3px auto;
+      display: inline-block;
+    }
+  }
+}
+
 .main-content-drawer {
   height: 100%;
 
@@ -24,6 +41,9 @@
 
       .logo {
         width: 176px;
+        &.handset-logo-width {
+          width: 140px;
+        }
       }
     }
 
