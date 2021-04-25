@@ -17,9 +17,5 @@ export class ShitHomeComponent implements OnInit {
       .then((e) => {
         this.balance = e;
       });
-
-
-      this.contractService.web3;
-
   }
 }
