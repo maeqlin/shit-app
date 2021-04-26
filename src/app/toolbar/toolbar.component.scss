@@ -4,9 +4,19 @@ mat-toolbar {
   left: 0;
   width: 100%;
   z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 
   .toolbar-right {
-    position: absolute;
-    right: 50px;
+
+
+    button {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      max-width: 132px;
+    }
   }
 }

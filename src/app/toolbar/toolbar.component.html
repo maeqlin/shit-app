@@ -2,7 +2,7 @@
     <div class="toolbar-left">
         <button *ngIf="appComponent.isHandset" (click)="appComponent.toggleSideNav()"> open</button>
     </div>
-    <div *ngIf="!appComponent.isHandset" class="toolbar-right">
+    <div  class="toolbar-right">
         <button *ngIf="currentAddress">{{currentAddress}}</button>
         <button *ngIf="!currentAddress" (click)="enableEthereum()">Connect</button>
     </div>
