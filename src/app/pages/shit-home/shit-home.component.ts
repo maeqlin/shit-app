@@ -28,7 +28,6 @@ export class ShitHomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.checkBalance();
   }
 
   checkBalance() {
