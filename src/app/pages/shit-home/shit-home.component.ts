@@ -18,9 +18,10 @@ export class ShitHomeComponent implements OnInit {
     private readonly contractService: ContractService,
     private readonly router: Router
   ) {
-    router.events.subscribe((e) => {
-      if (NavigationEnd) {
+    // router.events.pipe(filter(e => e instanceof NavigationEnd).subscribe((e) => { ... }
 
+    router.events.forEach((event) => {
+      if (event instanceof NavigationEnd) {
         this.checkBalance();
       }
     });
