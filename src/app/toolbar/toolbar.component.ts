@@ -1,4 +1,5 @@
 import { ChangeDetectorRef, Component, OnInit } from "@angular/core";
+import { AppComponent } from "../app.component";
 import { ContractService } from "../contract.service";
 
 
@@ -16,7 +17,7 @@ export class ToolbarComponent implements OnInit {
 
   constructor(
     private readonly contractService: ContractService,
-    private readonly cdr: ChangeDetectorRef
+    public appComponent : AppComponent,
   ) {}
 
   ngOnInit(): void {

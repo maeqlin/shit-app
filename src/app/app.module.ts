@@ -21,6 +21,7 @@ import { ThemeSwitcherComponent } from "./theme-switcher/theme-switcher.componen
 import { FormsModule } from "@angular/forms";
 import { ToolbarComponent } from './toolbar/toolbar.component';
 
+
 const appRoutes: Routes = [
   { path: "shit-home", component: ShitHomeComponent },
   {
