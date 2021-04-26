@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { NavigationEnd, Router } from "@angular/router";
 import { ContractService } from "src/app/contract.service";
 
 @Component({
@@ -7,22 +8,29 @@ import { ContractService } from "src/app/contract.service";
   styleUrls: ["./shit-home.component.scss"],
 })
 export class ShitHomeComponent implements OnInit {
-
   balance: any;
 
   currentAddress: string;
 
   connected = false;
 
+  constructor(
+    private readonly contractService: ContractService,
+    private readonly router: Router
+  ) {
+    router.events.subscribe((e) => {
+      if (NavigationEnd) {
 
-  constructor(private readonly contractService : ContractService) {}
+        this.checkBalance();
+      }
+    });
+  }
 
   ngOnInit(): void {
-
     this.checkBalance();
   }
 
-  checkBalance(){
+  checkBalance() {
     this.contractService.web3.eth.requestAccounts().then((e) => {
       this.currentAddress = e[0];
       this.contractService.web3.eth
@@ -34,6 +42,5 @@ export class ShitHomeComponent implements OnInit {
           console.log(er);
         });
     });
-
   }
 }
