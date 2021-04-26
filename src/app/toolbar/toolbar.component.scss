@@ -1,0 +1,12 @@
+mat-toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+
+  .toolbar-right {
+    position: absolute;
+    right: 50px;
+  }
+}

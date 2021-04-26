@@ -19,6 +19,7 @@ import { ShitStatementsComponent } from "./pages/shit-statements/shit-statements
 import { ShitSettingsComponent } from "./pages/shit-settings/shit-settings.component";
 import { ThemeSwitcherComponent } from "./theme-switcher/theme-switcher.component";
 import { FormsModule } from "@angular/forms";
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 const appRoutes: Routes = [
   { path: "shit-home", component: ShitHomeComponent },
@@ -64,6 +65,7 @@ const appRoutes: Routes = [
     ShitStatementsComponent,
     ShitSettingsComponent,
     ThemeSwitcherComponent,
+    ToolbarComponent,
   ],
   imports: [
     BrowserModule,

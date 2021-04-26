@@ -12,7 +12,7 @@ export class ContractService {
    */
   web3: Web3;
 
-  currentAddress : string;
+  currentAddress: string;
 
   constructor() {
     this.web3 = new Web3(
@@ -23,14 +23,13 @@ export class ContractService {
 
   ngOnInit() {}
 
-    // this.web3.eth.requestAccounts().then((e) => {
-    //   console.log(e);
+  // this.web3.eth.requestAccounts().then((e) => {
+  //   console.log(e);
 
-    // });
-    // return new Promise((resolve) => {
-    //   this.web3.eth.requestAccounts().then((e) => {
-    //     resolve();
-    //   });
-    // });
-  
+  // });
+  // return new Promise((resolve) => {
+  //   this.web3.eth.requestAccounts().then((e) => {
+  //     resolve();
+  //   });
+  // });
 }

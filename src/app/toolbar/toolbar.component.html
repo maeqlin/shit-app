@@ -1,0 +1,8 @@
+<mat-toolbar>
+    <div class="toolbar-left">
+    </div>
+    <div class="toolbar-right">
+        <button *ngIf="currentAddress">{{currentAddress}}</button>
+        <button *ngIf="!currentAddress" (click)="enableEthereum()">Connect</button>
+    </div>
+</mat-toolbar>

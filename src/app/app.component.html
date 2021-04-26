@@ -1,11 +1,9 @@
-<mat-toolbar *ngIf="isHandset">
-
-
-  <!-- <svg-icon *ngIf="isHandset && sidenavRef.closedStart" (click)="toggleSideNav()" src="/assets/images/svg/settings.svg"
+<!-- <svg-icon *ngIf="isHandset && sidenavRef.closedStart" (click)="toggleSideNav()" src="/assets/images/svg/settings.svg"
     [svgStyle]="{ 'width.px':24}"></svg-icon> -->
-</mat-toolbar>
+
 
 <mat-drawer-container class="main-content-drawer">
+
 
   <mat-drawer mode="side" [opened]="isSidenavOpened" [disableClose]="isHandset ? 'false' : 'true'" #sidenavRef>
     <div class="logo-wrapper">
@@ -69,6 +67,8 @@
   <mat-drawer-content>
     <div class="container">
       <div class="content">
+        <app-toolbar>
+        </app-toolbar>
         <router-outlet></router-outlet>
       </div>
     </div>
