@@ -27,8 +27,7 @@ export class ShitHomeComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   checkBalance() {
     this.contractService.web3.eth.requestAccounts().then((e) => {
