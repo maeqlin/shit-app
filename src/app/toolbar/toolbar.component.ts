@@ -38,6 +38,7 @@ export class ToolbarComponent implements OnInit {
 
   async enableEthereum() {
     this.info = await this.contractService.getInfo();
+    this.cdr.detectChanges();
     console.log(this.info);
     // this.contractService.web3.eth.requestAccounts().then((e) => {
     //   this.currentAddress = e[0];
@@ -64,7 +65,7 @@ export class ToolbarComponent implements OnInit {
 
         if (!accounts.length) {
           console.log('disconn');
-          
+
           this.info = null;
           localStorage.removeItem('info');
           this.cdr.detectChanges();

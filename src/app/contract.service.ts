@@ -28,8 +28,6 @@ export class ContractService {
   }
 
   async getInfo(localInfo?) {
-    let currentAccount: string;
-
     if (!localInfo) {
       const accounts = await this.getAccounts();
       this.info.currentAddress = accounts[0];
