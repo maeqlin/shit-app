@@ -22,12 +22,13 @@ export class ShitHomeComponent implements OnInit {
 
     router.events.forEach((event) => {
       if (event instanceof NavigationEnd) {
-        this.checkBalance();
+        //this.checkBalance();
       }
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
   checkBalance() {
     this.contractService.web3.eth.requestAccounts().then((e) => {

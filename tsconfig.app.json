@@ -4,6 +4,7 @@
     "outDir": "./out-tsc/app",
     "types": [ "node" ],
     "typeRoots": [ "../node_modules/@types" ],
+    "allowSyntheticDefaultImports": true
   },
   "files": [
     "src/main.ts",
