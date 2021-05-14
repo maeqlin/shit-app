@@ -16,4 +16,11 @@ export class InstallMetamaskDialogComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+
+  installMetamask(){
+    window.open('https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn', '_blank');
+
+  }
+
 }
