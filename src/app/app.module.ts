@@ -20,6 +20,10 @@ import { ShitSettingsComponent } from "./pages/shit-settings/shit-settings.compo
 import { ThemeSwitcherComponent } from "./theme-switcher/theme-switcher.component";
 import { FormsModule } from "@angular/forms";
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { ConnectDialogComponent } from "./dialogs/connect-dialog/connect-dialog.component";
+import {MatDialogModule} from '@angular/material/dialog';
+import { InstallMetamaskDialogComponent } from './dialogs/install-metamask-dialog/install-metamask-dialog.component';
+
 
 
 const appRoutes: Routes = [
@@ -67,6 +71,8 @@ const appRoutes: Routes = [
     ShitSettingsComponent,
     ThemeSwitcherComponent,
     ToolbarComponent,
+    ConnectDialogComponent,
+    InstallMetamaskDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -75,6 +81,7 @@ const appRoutes: Routes = [
     MatSidenavModule,
     MatToolbarModule,
     MatInputModule,
+    MatDialogModule,
     FormsModule,
     MatSlideToggleModule,
     HttpClientModule,

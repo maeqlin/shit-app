@@ -4,6 +4,6 @@
     </div>
     <div  class="toolbar-right">
         <button *ngIf="info">{{info.currentAddress}}</button>
-        <button *ngIf="!info" (click)="enableEthereum()">Connect</button>
+        <button *ngIf="!info" (click)="connectDialog()">Connect</button>
     </div>
 </mat-toolbar>
