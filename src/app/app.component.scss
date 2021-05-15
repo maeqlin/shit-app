@@ -15,6 +15,14 @@ mat-toolbar {
   }
 }
 
+.close-icon {
+  display: none;
+}
+
+.show-close {
+  display: block;
+}
+
 .main-content-drawer {
   height: 100%;
 
