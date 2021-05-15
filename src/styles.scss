@@ -164,8 +164,6 @@ $dark-app-theme: mat-dark-theme($dark-primary, $dark-accent);
 html,
 body {
   height: 100%;
-}
-body {
   margin: 0;
   font-family: Poppins, sans-serif;
 }
@@ -214,5 +212,15 @@ h2 {
     -webkit-transition: all 0.25s;
     -o-transition: all 0.25s;
     transition: all 0.25s;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .page-col {
+    padding: 0 20px;
+  }
+
+  .card-wrapper {
+    margin: 0;
   }
 }
