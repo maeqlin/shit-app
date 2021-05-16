@@ -23,6 +23,8 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { ConnectDialogComponent } from "./dialogs/connect-dialog/connect-dialog.component";
 import {MatDialogModule} from '@angular/material/dialog';
 import { InstallMetamaskDialogComponent } from './dialogs/install-metamask-dialog/install-metamask-dialog.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+
 
 
 
@@ -85,6 +87,10 @@ const appRoutes: Routes = [
     FormsModule,
     MatSlideToggleModule,
     HttpClientModule,
+
+    MatFormFieldModule,
+    MatInputModule,
+    MatFormFieldModule,
     AngularSvgIconModule.forRoot(),
     RouterModule.forRoot(appRoutes, { relativeLinkResolution: "legacy" }),
   ],

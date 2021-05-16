@@ -58,6 +58,7 @@ export class ToolbarComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    
     console.log(this.contractService.web3.eth.net.isListening());
 
     this.checkMetaMaskConnection();
@@ -121,10 +122,6 @@ export class ToolbarComponent implements OnInit {
     }
   }
 
-  getTokenBalance() {
-    console.log(this.minABI);
-  }
-
   installMetamask() {
     this.dialog.open(InstallMetamaskDialogComponent);
   }
@@ -132,7 +129,6 @@ export class ToolbarComponent implements OnInit {
   connectDialog() {
     if (!this.isMetamaskInstalled) {
       this.installMetamask();
-
       return;
     }
 

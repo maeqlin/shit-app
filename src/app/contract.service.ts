@@ -12,16 +12,19 @@ export class ContractService {
 
   currentAddress: string;
 
-  info: { currentAddress: string, balance: string } = { currentAddress: '', balance: '' };
+  info: { currentAddress: string; balance: string } = {
+    currentAddress: "",
+    balance: "",
+  };
 
   constructor() {
     this.web3 = new Web3(
       Web3.givenProvider ||
-      "wss://rinkeby.infura.io/ws/v3/38548d4828ba402a93d2fd3b5cc3afca"
+        "wss://rinkeby.infura.io/ws/v3/38548d4828ba402a93d2fd3b5cc3afca"
     );
   }
 
-  ngOnInit() { }
+  ngOnInit() {}
 
   async getAccounts() {
     return await this.web3.eth.requestAccounts();
@@ -39,7 +42,7 @@ export class ContractService {
 
     this.info.balance = balance;
 
-    localStorage.setItem('info', JSON.stringify(this.info));
+    localStorage.setItem("info", JSON.stringify(this.info));
 
     return this.info;
 
@@ -54,5 +57,14 @@ export class ContractService {
     //       console.log(er);
     //     });
     // });
+  }
+
+  localStrorageAddress() {
+    const localInfo = localStorage.getItem("info");
+    if (localInfo) {
+      return JSON.parse(localInfo);
+    } else {
+      return null;
+    }
   }
 }
